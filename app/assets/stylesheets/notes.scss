@@ -15,7 +15,7 @@ input, textarea {
 .navbar-brand {
   font-size: 27px !important;
   font-family: 'Ubuntu', sans-serif;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .navbar-nav {
@@ -24,4 +24,8 @@ input, textarea {
 
 .navbar {
   border-bottom: 0.25rem solid #2780E3 !important;
+}
+
+a {
+  text-decoration: none !important;
 }
