@@ -38,6 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'simple_form'
 gem 'devise'
+gem 'devise-bootstrap-views', '~> 1.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.3.1'
 
