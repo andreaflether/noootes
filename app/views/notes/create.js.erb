@@ -1,0 +1,5 @@
+$('#new-note form').remove();
+$('#new-note a').show();
+$('div#notes').prepend(
+  $("<%= j render @note %>").hide().fadeIn('slow')
+);

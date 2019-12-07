@@ -17,10 +17,13 @@ class NotesController < ApplicationController
   def create
     @note = current_user.notes.build(note_params)
 
-    if @note.save
-      redirect_to @note
-    else
-      render 'new'
+    respond_to do |format|
+      if @note.save
+        format.html {redirect_to @note, notice: 'Note was successfully created.'}
+        format.js { render layout: false }
+      else
+        render 'new'
+      end
     end
   end
 
@@ -38,7 +41,12 @@ class NotesController < ApplicationController
 
   def destroy
     @note.destroy
-    redirect_to notes_path
+    # redirect_to notes_path
+
+    respond_to do |format|
+      format.html { redirect_to notes_path, notice: 'Note deleted.'}
+      format.js
+    end
   end
 
   private

@@ -1,14 +1,9 @@
-<div class="mt-4">
-  <div class="card-columns">
-    <% @notes.each do |note| %>
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title"><%= link_to note.title, note %></h2>
-          <h6 class="card-subtitle mb-2 text-muted"><%= time_ago_in_words(note.created_at) %> ago</h6>
-          <p class="card-text"><%= note.content %></p>
-        </div>
-      </div>
-    <% end %>
+<div class="row">
+  <div class="col-md-12 text-center" id="new-note">
+    <%= link_to "New Note", new_note_path, class: "btn btn-primary btn-lg mt-3", remote: true %>
   </div>
-  <%= link_to "New Note", new_note_path, class: "btn btn-primary mt-3" %>
+</div>
+
+<div class="card-columns mt-4" id="notes">
+  <%= render @notes %>
 </div>
