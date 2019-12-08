@@ -2,6 +2,7 @@ $('#new-note a').hide().parent().append("<%= j render 'form', note: @note %>");
 $('#exampleModal').modal('show');
 
 $('#exampleModal').on('hidden.bs.modal', function () {
-  // do something…
   $('#new-note a').show();
 })
+
+$('.form-control').val("");

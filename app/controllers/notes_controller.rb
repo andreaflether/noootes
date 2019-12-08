@@ -4,6 +4,10 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.where(user_id: current_user).order("created_at DESC")
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def show
@@ -20,7 +24,7 @@ class NotesController < ApplicationController
     respond_to do |format|
       if @note.save
         format.html {redirect_to @note, notice: 'Note was successfully created.'}
-        format.js { render layout: false }
+        format.js
       else
         render 'new'
       end
@@ -28,7 +32,9 @@ class NotesController < ApplicationController
   end
 
   def edit
-
+    respond_to do |format|
+      format.js
+    end
   end
 
   def update

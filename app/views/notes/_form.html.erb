@@ -8,11 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @note, remote: true do |f| %>
-          <%= f.input :title, class: "form-control" %>
-          <%= f.input :content %>
-          <%= f.button :submit, class: "btn btn-outline-primary" %>
-        <% end %>
+        <%= render 'modal' %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
