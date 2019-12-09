@@ -1,11 +1,16 @@
 <div class="row">
   <div class="col-md-12 text-center" id="new-note">
+    <% unless @notes.any? %>
+      <h5 class="mt-4">No notes just yet. <b>Create one!</b></h5>
+    <% end %>
     <%= link_to "New Note", new_note_path, class: "btn btn-primary btn-lg mt-4 new", remote: true, "data-toggle" => "modal", "data-target" =>"#exampleModal" %>
   </div>
 </div>
 
 <div class="card-columns justify-content-center mt-4" id="notes">
-  <%= render @notes %>
+  <% unless @notes.empty? %>
+    <%= render @notes %>
+  <% end %>
 </div>
 
 <script>
