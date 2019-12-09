@@ -1,10 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Hind:400,500,600,700&display=swap');
 
+.logotipo {
+  width: 12.5rem !important;
+  height: auto !important;
+}
 
 .navbar, #new-note {
   font-family: 'Lato', sans-serif;
+}
+
+@media (max-width: 991px) {
+  .logotipo {
+    position: relative;
+    left: 22.5%;
+    margin-left: 5vw !important;  /* 50% of your logo width */
+    display: block;
+  }
+}
+
+.nav-link {
+  font-family: 'Hind', sans-serif;
+  // text-transform: uppercase;
+  // letter-spacing: 3px;
 }
 
 .btn {

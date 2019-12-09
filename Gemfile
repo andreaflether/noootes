@@ -34,13 +34,15 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
+# gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'sprockets', '~> 3.7', '>= 3.7.2'
 gem 'jquery-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'bootstrap', '~> 4.3.1'
 gem 'turbolinks', '~> 5'
+gem 'inline_svg'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

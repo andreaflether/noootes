@@ -12,7 +12,7 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="form-group form-check">
+    <div class="form-group form-check text-center">
       <%= f.check_box :remember_me, class: 'form-check-input' %>
       <%= f.label :remember_me, class: 'form-check-label' do %>
         <%= resource.class.human_attribute_name('remember_me') %>
@@ -20,7 +20,7 @@
     </div>
   <% end %>
 
-  <div class="form-group">
+  <div class="form-group text-center">
     <%= f.submit  t('.sign_in'), class: 'btn btn-primary' %>
   </div>
 <% end %>

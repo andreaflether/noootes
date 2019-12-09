@@ -4,14 +4,13 @@ class NotesController < ApplicationController
 
   def index
     @notes = Note.where(user_id: current_user).order("created_at DESC")
+  end
+
+  def show
     respond_to do |format|
       format.js
       format.html
     end
-  end
-
-  def show
-
   end
 
   def new

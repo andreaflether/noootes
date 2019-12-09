@@ -1,4 +1,4 @@
-$('#new-note a').hide().parent().append("<%= j render 'form', note: @note %>");
+$('#new-note a').hide().parent().append("<%= j render 'modal', note: @note %>");
 $('#exampleModal').modal('show');
 
 $('#exampleModal').on('hidden.bs.modal', function () {
