@@ -1,4 +1,4 @@
-![Noootes Logo](/app/assets/images/noootes_2.png) 
+![Noootes Logo](/app/assets/images/noootes_2_no_tpc.png) 
 
 a simple google keep lookalike, for study purposes. has:
 
