@@ -1,6 +1,7 @@
-<h1 class="text-center mt-3 mb-4"><b><%= t('.sign_up')%></b></h1>
+<div class="col-md-6 mx-auto">
+  <h1 class="text-center mt-3 mb-4"><b><%= t('.sign_up')%></b></h1>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= bootstrap_devise_error_messages! %>
 
   <div class="form-group">
@@ -13,7 +14,7 @@
     <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
 
     <% if @minimum_password_length %>
-      <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
+    <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
     <% end %>
   </div>
 
@@ -25,6 +26,7 @@
   <div class="form-group text-center">
     <%= f.submit t('.sign_up'), class: 'btn btn-primary' %>
   </div>
-<% end %>
+  <% end %>
 
-<%= render 'devise/shared/links' %>
+  <%= render 'devise/shared/links' %>
+</div>

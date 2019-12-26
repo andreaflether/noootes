@@ -14,7 +14,8 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <%= inline_svg("logo_grey.svg", class: "logotipo navbar-brand", style: "cursor: pointer;") %>
+        <%#= inline_svg("logo_grey.svg", class: "logotipo navbar-brand", style: "cursor: pointer;") %>
+        <a class="navbar-brand" href="/">Noootes!</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -23,7 +24,9 @@
           <% if user_signed_in? %>
           <ul class="navbar-nav mr-auto mt-1">
             <li class="nav-item">
-              <a class="nav-link" href="/notes/new">New note</a>
+              <!-- <a class="nav-link" href="/notes/new">New note</a> -->
+              <%= link_to 'New note', new_note_path, remote: true, "data-toggle" => "modal", "data-target" =>"#exampleModal",
+              class: 'nav-link' %>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -41,11 +44,11 @@
           </div>
           <% else %>
           <ul class="navbar-nav align-items-center ml-auto">
-            <li class="nav-item">
-              <%= link_to "Log in", new_user_session_path, class: "nav-link text-light" %>
+            <li class="nav-item px-2">
+              <%= link_to "Log in", new_user_session_path, class: "nav-link text-light txt-rem" %>
             </li>
-            <li class="nav-item">
-              <%= link_to "Sign up", new_user_registration_path, class: "nav-link text-light" %>
+            <li class="nav-item px-2">
+              <%= link_to "Sign up", new_user_registration_path, class: "btn btn-outline-primary btn-lg" %>
             </li>
           </ul>
           <% end %>
