@@ -1,11 +1,9 @@
 <div class="col-md-8 mx-auto">
   <%= simple_form_for @note, remote: true do |f| %>
-  <%= f.input :title, class: "form-control" %>
-  <%= f.input :content %>
-  <div class="col-md-12 text-center">
-    <%= f.button :submit, class: "btn btn-outline-primary text-center" %>
-
-  </div>
+    <%= f.input :title, class: "form-control" %>
+    <%= f.input :content %>
+    <div class="col-md-12 text-center">
+      <%= f.button :submit, class: "btn btn-outline-primary text-center" %>
+    </div>
   <% end %>
-
 </div>

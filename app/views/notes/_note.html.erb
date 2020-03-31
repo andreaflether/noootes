@@ -1,7 +1,7 @@
-<div class="card">
+<div class="card" id="note_<%= note.id %>"">
   <div class="card-body">
     <h2 class="card-title"><%= link_to note.title, note %></h2>
-    <h6 class="card-subtitle mb-2 text-muted"><%= time_ago_in_words(note.created_at) %> ago</h6>
+    <h6 class="card-subtitle mb-2 text-muted"><%= time_ago_in_words(note.updated_at) %> ago</h6>
     <p class="card-text"><%= note.content %></p>
     <%= link_to edit_note_path(note), class: "btn btn-outline-primary btn-sm edit", remote: true do %>
       <i class="fas fa-pencil-alt"></i>

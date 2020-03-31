@@ -1,8 +1,13 @@
-$('#new-note a').hide().parent().append("<%= j render 'modal', note: @note %>");
-$('#exampleModal').modal('show');
-
-$('#exampleModal').on('hidden.bs.modal', function () {
-  $('#new-note a').show();
+// Add the dialog title
+$('#exampleModal h3').html("New Note");
+ 
+// Render the new form
+$('.modal-body').html('<%= j render("form") %>');
+ 
+// Show the dynamic dialog
+$('#exampleModal').modal("show");
+ 
+// Set focus to the first element
+$('#exampleModal').on('shown.bs.modal', function () {
+  $('#note_title').focus()
 })
-
-$('.form-control').val("");

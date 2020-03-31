@@ -32,13 +32,17 @@ class NotesController < ApplicationController
 
   def edit
     respond_to do |format|
-      format.js
+      format.html
+      format.js 
     end
   end
 
   def update
     if @note.update(note_params)
-      redirect_to @note, notice: 'Note updated.'
+      respond_to do |format|
+        format.html { redirect_to request.referrer, notice: 'Note updated.' }
+        format.js 
+      end
     else
       render 'edit'
     end
