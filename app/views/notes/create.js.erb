@@ -5,3 +5,9 @@ $('div#notes').prepend(
 );
 
 $('#exampleModal').modal('hide');
+
+bootoast.toast({
+  message: 'Note created successfully!',
+  position: 'top-left',
+  type: 'success'
+});
